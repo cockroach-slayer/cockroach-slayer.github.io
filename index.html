@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cockroach Slayer - Horror Comedy AR Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <!-- Add this in the head section, before other CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    blood: '#DC2626',
+                    darkRed: '#991B1B',
+                    lightRed: '#EF4444'
+                },
+                fontFamily: {
+                    gaming: ['Oxanium', 'cursive'],
+                    body: ['Inter', 'sans-serif']
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, .gaming-text {
+        font-family: 'Oxanium', cursive;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-sm gaming-text  ">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold">🪳 Cockroach Slayer</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-red-500 transition">About</a>
+                    <a href="#gameplay" class="hover:text-red-500 transition">Gameplay</a>
+                    <a href="#gallery" class="hover:text-red-500 transition">Gallery</a>
+                    <a href="#team" class="hover:text-red-500 transition">Team</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen flex items-center justify-center relative overflow-hidden gaming-text ">
+        <div class="absolute inset-0 bg-[url('hero1.png')] bg-cover bg-center opacity-50"></div>
+        <div class="container mx-auto px-6 text-center relative" data-aos="fade-up">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 text-red-600">Cockroach Slayer</h1>
+            <p class="text-xl md:text-2xl mb-8">Kill it before it crawls on you.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center gaming-text ">
+                <a href="https://deanftrh.8thwall.app/cockroach-slayer-x/" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition transform hover:scale-105 font-gaming">
+                    🎮 Play Now (WebAR)
+                </a>
+                <a href="#trailer" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-4 rounded-lg text-lg transition transform hover:scale-105 font-gaming scroll-smooth">
+                    📽️ Watch Trailer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+   <section id="about" class="py-20 gaming-text bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-8 text-red-500 font-gaming tracking-wide">About the Game</h2>
+                <p class="text-xl text-gray-300 mb-8 font-gaming">
+                    "Welcome to humanity's worst nightmare "
+                </p>
+                <div class="prose prose-lg text-gray-300 mb-12">
+                    <p class="mb-4">
+                        Your journey begins in an ordinary subway station bathroom. The calm before the storm shatters as one cockroach appears, then ten, then hundreds. Armed with makeshift weapons — from slippers to mops — you must fight through dark corridors, subway platforms, and dimly lit tunnels in a desperate bid to reach home.
+                    </p>
+                    <p class="mb-4">
+                        But home holds a dark secret. Your sibling, fallen victim to the roach invasion, transforms this personal tragedy into a mission of vengeance. You're no longer just surviving — you're becoming the Cockroach Slayer.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-700 p-6 rounded-lg hover:bg-red-900 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2 font-gaming">Slapstick Horror</h3>
+                        <p class="text-gray-300">Dark comedy meets jump scares in this unique horror experience</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg hover:bg-red-900 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2 font-gaming">Makeshift Arsenal</h3>
+                        <p class="text-gray-300">Turn everyday items into roach-slaying weapons</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg hover:bg-red-900 transition duration-300">
+                        <h3 class="text-xl font-bold mb-2 font-gaming">Evolving Threat</h3>
+                        <p class="text-gray-300">Face increasingly mutated and dangerous roaches</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Features -->
+    <section id="gameplay" class="py-20  gaming-text">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-red-500" data-aos="fade-up">Gameplay Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl hover:bg-red-900 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-xl font-bold mb-2">Anti-Roach Arsenal</h3>
+                    <p class="text-gray-400">Multiple weapons to choose from</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl hover:bg-red-900 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">👾</div>
+                    <h3 class="text-xl font-bold mb-2">Smart AI Roaches</h3>
+                    <p class="text-gray-400">They flee, attack, and fly!</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl hover:bg-red-900 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold mb-2">Fun Missions</h3>
+                    <p class="text-gray-400">Engaging puzzles and challenges</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl hover:bg-red-900 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">🔊</div>
+                    <h3 class="text-xl font-bold mb-2">Epic Sound FX</h3>
+                    <p class="text-gray-400">Hilarious reactions and effects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trailer Section -->
+    <section id="trailer" class="py-20 bg-gray-800  gaming-text">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-red-500 font-gaming tracking-wide">Official Trailer</h2>
+            <div class="max-w-4xl mx-auto aspect-video">
+                <iframe 
+                    class="w-full h-full rounded-xl shadow-2xl"
+                    src="https://www.youtube.com/embed/s-s0Vh2oRJo" 
+                    title="Cockroach Slayer Trailer"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <!-- Team Section -->
+<section id="team" class="py-20 bg-gray-800  gaming-text">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16 text-red-500 font-gaming" data-aos="fade-up">Meet the Team</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+            <!-- Fani -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://www.linkedin.com/in/fani-abdullah/" target="_blank" class="block group">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-red-600 transition-transform group-hover:scale-105">
+                        <img src="team/fani.png" alt="Fani Abdullah" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold font-gaming">Fani</h3>
+                    <p class="text-red-500"> Game Developer / Product  </p>
+                </a>
+            </div>
+
+            <!-- Dean -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://www.linkedin.com/in/deanftrh/" target="_blank" class="block group">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-red-600 transition-transform group-hover:scale-105">
+                        <img src="team/dean.png" alt="Dean" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold font-gaming">Dean</h3>
+                    <p class="text-red-500"> Creative Director / Technical Art</p>
+                </a>
+            </div>
+
+            <!-- Hera -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://www.linkedin.com/in/rastyawidya/" target="_blank" class="block group">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-red-600 transition-transform group-hover:scale-105">
+                        <img src="team/hera.png" alt="Hera" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold font-gaming">Hera</h3>
+                    <p class="text-red-500">3D Generalist / Animator </p>
+                </a>
+            </div>
+
+            <!-- Abdullah -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://www.linkedin.com/in/abdullah-529a95247/" target="_blank" class="block group">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-red-600 transition-transform group-hover:scale-105">
+                        <img src="team/abdullah.png" alt="Abdullah" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold font-gaming">Abdullah</h3>
+                    <p class="text-red-500"> Game programmer / Unity</p>
+                </a>
+            </div>
+
+            <!-- Aji -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://www.linkedin.com/in/rhjhaerol/" target="_blank" class="block group">
+                    <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-red-600 transition-transform group-hover:scale-105">
+                        <img src="team/aji.png" alt="Aji" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold font-gaming">Aji</h3>
+                    <p class="text-red-500">Product / Business Strategy </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="bg-gray-800 pt-20 pb-10 gaming-text">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <!-- Left Column -->
+            <div class="text-center md:text-left">
+                <img src="logo.png" alt="Cockroach Slayer Logo" class="h-12 mb-4 mx-auto md:mx-0">
+                <p class="text-gray-400">Experience the next generation of horror-comedy AR gaming.</p>
+            </div>
+            
+            <!-- Middle Column -->
+            <div class="text-center flex flex-col items-center justify-center">
+                <img src="logowinner.png" alt="Winner Logo" class="h-24 mb-4">
+            </div>
+
+            <!-- Right Column -->
+            <div class="text-center md:text-right">
+                <h3 class="text-xl font-bold mb-4 font-gaming text-red-500">Connect With Us</h3>
+                <div class="flex flex-col space-y-4">
+                    <a href="mailto:faniabdullah27@gmail.com" class="text-gray-400 hover:text-red-500 flex items-center justify-end gap-2">
+                        <span>faniabdullah27@gmail.com</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-17 1h17a.5.5 0 01.5.5v.94l-9 6.75-9-6.75V5.5a.5.5 0 01.5-.5zM3.5 19a.5.5 0 01-.5-.5V7.044l8.657 6.493a.5.5 0 00.686 0L21 7.044V18.5a.5.5 0 01-.5.5h-17z"/></svg>
+                    </a>
+                    <a href="mailto:deanfitrah@gmail.com" class="text-gray-400 hover:text-red-500 flex items-center justify-end gap-2">
+                        <span>deanfitrah@gmail.com</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 4h-17A1.5 1.5 0 002 5.5v13A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0020.5 4zm-17 1h17a.5.5 0 01.5.5v.94l-9 6.75-9-6.75V5.5a.5.5 0 01.5-.5zM3.5 19a.5.5 0 01-.5-.5V7.044l8.657 6.493a.5.5 0 00.686 0L21 7.044V18.5a.5.5 0 01-.5.5h-17z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/playcockroachslayer" class="text-gray-400 hover:text-red-500 flex items-center justify-end gap-2">
+                        <span>@playcockroachslayer</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8">
+            <p class="text-gray-500 text-sm text-center">
+                © 2025 Cockroach Slayer
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
